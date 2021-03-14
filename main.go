@@ -7,7 +7,6 @@ import (
 	"phonecontroller/tap"
 )
 
-
 var Cmd = []string{"adb"}
 
 func main() {
@@ -25,7 +24,6 @@ func main() {
 	if *flags.Source != "" {
 		Cmd = append(Cmd, *flags.Source)
 	}
-
 
 	switch *flags.Action {
 	case "swipe":
