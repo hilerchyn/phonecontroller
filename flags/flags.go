@@ -11,3 +11,5 @@ var FromX = flag.Int("x", 850, "from x point.")
 var FromY = flag.Int("y", 1400, "from y point.")
 var ToX = flag.Int("2x", 850, "to x point.")
 var ToY = flag.Int("2y", 300, "to y point.")
+
+var App = flag.String("app", "com.ss.android.article.lite/com.ss.android.article.lite.activity.SplashActivity", "the app activity")

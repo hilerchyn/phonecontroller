@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"phonecontroller/flags"
+	"phonecontroller/run"
 	"phonecontroller/swipe"
 	"phonecontroller/tap"
 )
@@ -19,7 +20,6 @@ func main() {
 	}
 
 	Cmd = append(Cmd, "shell")
-	Cmd = append(Cmd, "input")
 
 	if *flags.Source != "" {
 		Cmd = append(Cmd, *flags.Source)
@@ -27,10 +27,15 @@ func main() {
 
 	switch *flags.Action {
 	case "swipe":
+		Cmd = append(Cmd, "input")
 		Cmd = append(Cmd, "swipe")
 		swipe.Run(Cmd)
 	case "tap":
+		Cmd = append(Cmd, "input")
 		tap.Run(Cmd)
+	case "run":
+
+		run.Run(Cmd)
 
 	}
 
