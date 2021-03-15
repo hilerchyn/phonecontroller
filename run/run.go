@@ -28,7 +28,7 @@ func Run(cmd []string) {
 
 			startCmd := append(originalCmd, "am", "start", *flags.App)
 			log.Println("start app: ", startCmd)
-			exe(cmd, 5)
+			exe(startCmd, 5)
 
 			clickTabBarCmd := append(originalCmd, "input", "tap", "584", "1848")
 			log.Println("click tab bar")
